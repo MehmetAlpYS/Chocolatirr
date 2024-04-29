@@ -46,11 +46,37 @@ nav {
     width: 50%;
 }
 
+/* Contenu de la 1ère card */
 #content{
     display: flex;
     flex-wrap: wrap;
     text-align: center;
     justify-content: center;
+    margin-bottom: 30px;
+    border-width: 10px;
+    border-bottom-style: groove;
+}
+
+/* Contenu de la 2ème card */
+#content2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #4b2307;
+}
+
+.card2 p{
+
+    color: white;
+}
+
+.card2 h2 {
+    color:white;
+
+}
+
+.card2 h3 {
+    color: white;
 }
 
 a {
@@ -84,6 +110,7 @@ h3{
     flex-wrap: wrap;
     background-color: #f1e1d1;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .card img{
@@ -95,6 +122,24 @@ h3{
 
 .card p{
     margin: auto;
+}
+
+.card2{
+    display: flex;
+    margin: auto;
+    width: 30%;
+}
+
+.card2 p{
+    margin-bottom: 10px;
+}
+
+.note{
+    text-align: center;
+}
+
+.card2 h2{
+    
 }
 
 .ban{
