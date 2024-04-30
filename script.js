@@ -25,9 +25,12 @@ function addProducts(data) {
     });
     console.log(real)
 
+    // Lecture du tableau Témoignage
     let temoi=""
     data.temoignages.forEach(element => {
-        temoi += `<div class="card2"> <h3>${element.prenom}</p> <h4>${element.typePrestation}</p> <p>${element.commentaire}</p> <p class="note">${element.note}</p> </div>`
+      // Affectation des clés sur les balises HTML
+        temoi += `<div class="card2"> <h2 class="prenom">${element.prenom}</p> <h3 class="type">${element.typePrestation}</h3> <p class="com">${element.commentaire}</p> <p class="not">${avis(element.note)}</p> </div>`
+      
     });
     console.log(temoi)
     let list=""
@@ -50,6 +53,35 @@ function addProducts(data) {
     document.querySelector("#content2").innerHTML += temoi
 
 }
+
+function avis(note){
+
+  let chaine =""
+ 
+  // Met la note sur 5
+  for(let i=1; i<=note; i++){
+      chaine+="★"
+  }
+  // Met la note du client 
+  for(let j=0; j<5-note;j++){
+      chaine+="☆"
+  }
+  return chaine
+}
+  /* Adresse du chocolatier 
+  var map = L.map('map').setView([45.439695, 4.3871779], 13);
+
+  var OpenStreetMap_Mapnik = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+  
+  L.marker([45.439695, 4.3871779], 13).addTo(map)
+      .bindPopup('')
+      .openPopup();*/
+ 
+
+
 
 
 
