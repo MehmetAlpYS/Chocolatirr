@@ -68,18 +68,48 @@ function avis(note){
   }
   return chaine
 }
-  /* Adresse du chocolatier 
-  var map = L.map('map').setView([45.439695, 4.3871779], 13);
+/*
+let header = document.querySelector("header")
 
-  var OpenStreetMap_Mapnik = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+window.addEventListener("scroll",()=>{
+  console.log("j'ai scrollé")
+  if(window.scrollY > ban.clientHeight - 100){
+      header.classList.add("headerColored")
+  }else{
+      header.classList.remove("headerColored")
+  }
+})*/
+
+var map = L.map('map').setView([48.48221, 2.07531], 13);
+
+L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.{ext}', {
+	minZoom: 0,
+	maxZoom: 20,
+	attribution: '&copy; CNES, Distribution Airbus DS, © Airbus DS, © PlanetObserver (Contains Copernicus Data) | &copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	ext: 'jpg'
+}).addTo(map);
+
+L.marker([48.48221, 2.07531, 13]).addTo(map)
+    .bindPopup('Chocolatier de Willy Wonka')
+    .openPopup();
+
+  /* Adresse du chocolatier 
+ var map = L.map('map').setView([45.439695, 4.3871779], 13);
+
+  L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner_background/{z}/{x}/{y}{r}.{ext}', {
+    minZoom: 0,
+    maxZoom: 20,
+    attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    ext: 'png'
   }).addTo(map);
   
   L.marker([45.439695, 4.3871779], 13).addTo(map)
-      .bindPopup('')
-      .openPopup();*/
- 
+      .bindPopup('Chocolatier')
+      .openPopup();
+      */
+  
+  
+
 
 
 

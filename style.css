@@ -21,13 +21,18 @@
 
 header {
     align-items: center;
-    background-color: #dcccc2;
+    background: rgb(141,98,57);
+    background: linear-gradient(355deg, rgba(141,98,57,1) 0%, rgba(95,58,0,1) 100%);
     padding: 20px 80px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
 }
 
 .willy{
     font-weight: bold;
-    color:#66442b;
+    color:#ffffff;
 }
 
 .logo {
@@ -48,8 +53,8 @@ nav {
     flex-wrap: wrap;
     text-align: center;
     justify-content: center;
-    margin-top: 200px;
-    margin-bottom: 200px;
+    margin-top: 50px;
+    margin-bottom: 100px;
     border-width: 10px;
     border-bottom-style: groove;
 }
@@ -61,12 +66,20 @@ nav {
     justify-content: center;
     background-color: #4b2307;
     text-align: center;
+    margin-bottom: 100px;
+}
+
+.map{
+    background-color: #5c2c1088;
 }
 
 #map{
-
+    margin: auto;
     width: 640px;
     height: 480px;
+    margin-bottom: 30px;
+    z-index: 1;
+    color: #4b2307;
     
 }
 
@@ -79,7 +92,7 @@ nav {
 
 a {
     text-decoration: none;
-    color: #66442b;
+    color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
 }
@@ -129,6 +142,7 @@ h3{
 
 .card p{
     margin: auto;
+    padding: 15px
 }
 
 .card2{
@@ -192,7 +206,6 @@ color: white;
 top:15%;
 left: 5%;
 width: 50%;
-margin-bottom: 10px;
 
 }
 
@@ -208,6 +221,14 @@ footer{
     display: flex;
     justify-content:center;
     flex-wrap: wrap;
+    background-color:#714a17;
+}
+
+footer p{
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 footer img{
@@ -225,8 +246,17 @@ footer img{
 
 .foot{
     margin-top: 40px;
-    color:gray;
+    color:#bdb7b7;
+    font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
     margin-right: 100px;
+}
+
+.local{
+    margin-left: 100px;
+}
+
+.local img{
+    width: 40px;
 }

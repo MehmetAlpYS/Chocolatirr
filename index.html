@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chocolatier de Willy Wonka</title>
+
+    <!--Carte-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+
+    <!--Animation scroll-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!--AOS Animation des DIV-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+
+    <title>Chocolatier de Willy Wonka</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+
     <!--Police-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,11 +29,9 @@
 
 <body>
 
-    <section>
-        <div>
     <header class="flex spaceBetween">
 
-        <a class="logo" href="https://www.google.com/fr/" title="lien vers le site de nike">
+        <a class="logo" href="#hero" title="lien vers le site de nike">
             <img src="https://img.freepik.com/vecteurs-libre/chocolat_24908-53998.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1714003200&semt=ais" 
             alt="logo chocolat"
             width=70px>
@@ -32,24 +42,22 @@
         <nav>
             <ul class="flex spaceBetween">
                 <li>
-                    <a href="https://www.nike.com/fr/w/nouveau-3n82y" title="Lien vers la page noveautés">Réalisation</a>
+                    <a href="#content" title="Lien vers la page noveautés">Réalisation</a>
                 </li>
                 <li>
-                    <a href="https://www.nike.com/fr/w/nouveau-3n82y" title="lien vers la page homme">Témoignage</a>
+                    <a href="#content2" title="lien vers la page homme">Témoignage</a>
                 </li>
 
                 <li>
-                    <a href="https://www.nike.com/fr/w/nouveau-3n82y" title="lien vers la page promotions">Contact</a>
+                    <a href="#footer" title="lien vers la page promotions">Contact</a>
                 </li>
             </ul>
         </nav>
     </header>
-    </div>
-    </section>
 
     <main>
     <section>
-        <div class="hero">
+        <div id="hero" class="hero">
             <h1></h1> 
             <img 
             src="https://img.goodfon.com/wallpaper/nbig/4/58/iaitsa-shokolad-shokoladnye-iaitsa-belyi-fon-konfety.webp" 
@@ -62,19 +70,23 @@
     </section>
 
     <section>
-
-        <h2>Realisation</h2>
-        <div id="content">
+        <div  id="content">
             
         </div>
+    </section>
 
+    <section>
         <div id="content2">
 
         </div>
     </section>
 
+    <div class="map" id="map"></div>
+
     </main>
-<footer>
+
+
+<footer id="footer">
 
 <div class="b">
 <p class="contact">CONTACTEZ NOUS</p>
@@ -83,15 +95,30 @@
     <img src="asset/facebook-circle.svg" alt="facebook">
 </a>
 
+<a href="#hero">
 <img src="https://img.freepik.com/vecteurs-libre/chocolat_24908-53998.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1714003200&semt=ais" alt="logo" >
-
-<a href="https://www.instagram.com/bonschocolatiers/">
+</a>
+<a href="https://www.instagram.com/chocolateriedepuyricard/?hl=fr">
     <img src="asset/instagram-logo.svg" alt="instagram">
 </a>
 </div>
 <p class="foot">© 2024 Chocolatier Willy Wonka • Created in France.</p>
 
-</footer>
+<div>
+<p>Mail :</p>
+<a href="mailto:contact@lechocolat-alainducasse.com?subject=Sujet du message">
+<img src="asset/email.svg" alt="">
+<p>contact@lechocolat-alainducasse.com</p>
+</a>
+</div>
 
+<div class="local">
+<p>Adresse :</p>
+<a href="https://www.google.fr/maps/place/Le+Chocolat+Alain+Ducasse,+Le+Comptoir+Versailles/@48.8058234,2.1315503,3a,75y,295.99h,91.05t/data=!3m7!1e1!3m5!1sRI7sBwDlrfBI07KcK2YSfQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DRI7sBwDlrfBI07KcK2YSfQ%26cb_client%3Dsearch.gws-prod.gps%26w%3D86%26h%3D86%26yaw%3D307.7219%26pitch%3D0%26thumbfov%3D100!7i16384!8i8192!4m16!1m9!3m8!1s0x47e67db13968fe11:0xce4a893cac2aaa33!2s15+Rue+du+Mar%C3%A9chal+Foch,+78000+Versailles!3b1!8m2!3d48.8059042!4d2.1313938!10e5!16s%2Fg%2F11c2f1jfj2!3m5!1s0x47e67dcf57acb1b5:0x899f51d3a12f628a!8m2!3d48.8059052!4d2.131503!16s%2Fg%2F11t5qgl83k?entry=ttu">
+<img src="asset/location.svg" alt="logo position">
+</a>
+</div>
+
+</footer>
 </body>
 </html>
