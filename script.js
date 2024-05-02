@@ -21,7 +21,8 @@ function addProducts(data) {
     let real=""
     data.realisations.forEach(element => {
       // Affectation des clés sur les balises HTML
-        real += `<div class="card"> <h3>${element.nom}</h3> <img src="${element.image}" alt=""> <p>${element.description}</p> </div>`
+        real += `<div class="card"> <h3>${element.nom}</h3> <img src="${element.image}" alt=""> <p>${element.description}</p> <a href="">
+        <p class="command"> Commandez Maintenant </p> </a> </div>`
     });
     console.log(real)
 

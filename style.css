@@ -237,6 +237,14 @@ footer img{
 
 }
 
+.card .command {
+    
+    margin-left: 20px;
+    background-color: white;
+    margin-bottom: 10px;
+    color: #4b2307;
+}
+
 .contact{
 
     margin-top: 10px;
