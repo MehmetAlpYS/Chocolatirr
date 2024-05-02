@@ -129,6 +129,7 @@ h3{
     border:solid;
     border-color: #7e4b30;
     border-radius: 2px;
+    
 }
 
 .card:hover {
@@ -155,7 +156,6 @@ h3{
     width: 32%;
     border: solid;
     border-color: black;
-    background-color: #66442b;
     border-radius: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
