@@ -69,18 +69,8 @@ function avis(note){
   }
   return chaine
 }
-/*
-let header = document.querySelector("header")
 
-window.addEventListener("scroll",()=>{
-  console.log("j'ai scrollé")
-  if(window.scrollY > ban.clientHeight - 100){
-      header.classList.add("headerColored")
-  }else{
-      header.classList.remove("headerColored")
-  }
-})*/
-
+// Localisation de la carte 
 var map = L.map('map').setView([48.48221, 2.07531], 13);
 
 L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.{ext}', {
@@ -95,6 +85,7 @@ L.marker([48.48221, 2.07531, 13]).addTo(map)
     .openPopup();
 
 
+    // Fonction concernant la popup de connexion
     function openForm() {
       document.getElementById("myForm").style.display = "block";
     }
@@ -102,25 +93,22 @@ L.marker([48.48221, 2.07531, 13]).addTo(map)
     function closeForm() {
       document.getElementById("myForm").style.display = "none";
     } 
-  /* Adresse du chocolatier 
- var map = L.map('map').setView([45.439695, 4.3871779], 13);
 
-  L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner_background/{z}/{x}/{y}{r}.{ext}', {
-    minZoom: 0,
-    maxZoom: 20,
-    attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    ext: 'png'
-  }).addTo(map);
+    // Fonction sur la popup d'inscription
+    function openForm2() {
+      document.getElementById("myForm2").style.display = "block";
+    } 
+    
+    function closeForm2() {
+      document.getElementById("myForm2").style.display = "none";
+    } 
   
-  L.marker([45.439695, 4.3871779], 13).addTo(map)
-      .bindPopup('Chocolatier')
-      .openPopup();
-      */
-  
-      /**
- ** POPUP by Stratis BAKAS
- */
- 
+ function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+ }
+
+
 
   
 
