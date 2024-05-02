@@ -21,7 +21,7 @@ function addProducts(data) {
     let real=""
     data.realisations.forEach(element => {
       // Affectation des clés sur les balises HTML
-        real += `<div class="card"> <h3>${element.nom}</h3> <img src="${element.image}" alt=""> <p>${element.description}</p> <a href="">
+        real += `<div class="card"> <h3>${element.nom}</h3> <img src="${element.image}" alt=""> <p>${element.description}</p> <a href="https://www.lechocolat-alainducasse.com/fr/coffret-decouverte-45-pieces">
         <p class="command"> Commandez Maintenant </p> </a> </div>`
     });
     console.log(real)
@@ -94,6 +94,14 @@ L.marker([48.48221, 2.07531, 13]).addTo(map)
     .bindPopup('Chocolatier de Willy Wonka')
     .openPopup();
 
+
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    } 
   /* Adresse du chocolatier 
  var map = L.map('map').setView([45.439695, 4.3871779], 13);
 
@@ -109,6 +117,11 @@ L.marker([48.48221, 2.07531, 13]).addTo(map)
       .openPopup();
       */
   
+      /**
+ ** POPUP by Stratis BAKAS
+ */
+ 
+
   
 
 

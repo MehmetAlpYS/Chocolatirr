@@ -31,6 +31,7 @@
 
     <header class="flex spaceBetween">
 
+        
         <a class="logo" href="#hero" title="lien vers le site de nike">
             <img src="https://img.freepik.com/vecteurs-libre/chocolat_24908-53998.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1714003200&semt=ais" 
             alt="logo chocolat"
@@ -40,6 +41,7 @@
         <p class="willy">Chocolatier de Willy Wonka</p>
 
         <nav>
+            
             <ul class="flex spaceBetween">
                 <li>
                     <a href="#content" title="Lien vers la page noveautés">Réalisation</a>
@@ -69,6 +71,9 @@
         </div>
     </section>
 
+
+
+    
     <section>
         <div  id="content">
             
@@ -81,7 +86,8 @@
         </div>
     </section>
 
-    <div class="map" id="map"></div>
+    <div id="map"></div>
+    <div class="map"></div>
 
     </main>
 
@@ -118,6 +124,23 @@
 <img src="asset/location.svg" alt="logo position">
 </a>
 </div>
+ <!-- Bouton pour ouvrir le popup -->
+ <button class="open-button" onclick="openForm()">Connexion</button>
+
+ <div class="form-popup" id="myForm">
+   <form action="/action_page.php" class="form-container">
+     <h1>Se connecter</h1>
+ 
+     <label for="email"><b>Email</b></label>
+     <input type="text" placeholder="Entrez votre mail" name="email" required>
+ 
+     <label for="psw"><b>Mot de passe</b></label>
+     <input class="pass" type="Mot de passe" placeholder="Entrez votre mot de passe " name="psw" required>
+ 
+     <button type="submit" class="btn">Se connecter</button>
+     <button type="button" class="btn cancel" onclick="closeForm()">Fermer</button>
+   </form>
+ </div> 
 
 </footer>
 </body>
